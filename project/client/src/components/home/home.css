@@ -1,0 +1,68 @@
+.TitleDiv {
+  text-align: center;
+  background-image: url("../../images/TitleBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
+.Title {
+  padding-top: 80px;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.TitleDescription {
+  padding-top: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-style: italic;
+  font-size: 36px;
+}
+
+.ScenarioDiv {
+  text-align: center;
+  background-image: url("../../images/ScenarioBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 1px;
+}
+
+.ScenarioTitle {
+  text-align: center;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.ScenarioDescription {
+  padding-top: 20px;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-size: 36px;
+}
+
+div.ScenarioPadding {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 30px;
+}
+
+div.noPadding {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+div.picPadding {
+  padding-bottom: 150px;
+}
+
+.picDim {
+  width: 300px;
+  height: 200px;
+}

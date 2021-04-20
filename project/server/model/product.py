@@ -26,6 +26,13 @@ class ProductDAO:
         result = cursor.fetchone()
         return result
 
+    def get_product_price_by_id(self, product_id):
+        cursor = self.conn.cursor()
+        query = "select product_price from product where product_id = %s;"
+        cursor.execute(query, (product_id,))
+        result = cursor.fetchone()
+        return result
+
     def get_product(self):
         cursor = self.conn.cursor()
         query = "select * from product;"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./equipment.css";
 import NavBar from "../navigationBar/navigationBar";
 import Container from 'react-bootstrap/Container'
@@ -8,8 +8,26 @@ import Image from 'react-bootstrap/Image'
 import SigSauer220R45LEGION from "../../images/Sig-Sauer-220R-45-LEGION.jpg"
 import SigSauerP365XROMEOZERO from "../../images/Sig-Sauer-P365X-ROMEOZERO.jpg"
 
+const API = 'http://127.0.0.1:5000/';
+const DEFAULT_QUERY = 'SurvivalApp/get/product/price/3';
+
 class Equipment extends React.Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      product_price: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch(API + DEFAULT_QUERY)
+      .then(response => response.json())
+      .then(data => this.setState({ product_price: data.product_price}));
+  }
+
   render() {
+    const { product_price } = this.state;
     return (
       <React.Fragment>
         <div className="EquipmentTitleDiv">
@@ -47,7 +65,7 @@ class Equipment extends React.Component {
                       <h2 className="EquipmentProductDescription">Stars</h2>
                     </Row>
                     <Row className="equipmentnoPadding">
-                      <h2 className="EquipmentProductDescription">$500.00</h2>
+                      <h2 className="EquipmentProductDescription">${product_price}</h2>
                     </Row>
                   </Col>
                 </Row>

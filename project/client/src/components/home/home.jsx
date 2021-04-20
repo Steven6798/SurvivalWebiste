@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./home.css";
 import NavBar from "../navigationBar/navigationBar";
 import Container from 'react-bootstrap/Container'

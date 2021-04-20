@@ -39,6 +39,15 @@ def handle_get_product_by_id(product_id):
         return jsonify("Method Not Allowed"), 405
 
 
+# This route gets a product's price by id
+@app.route('/SurvivalApp/get/product/price/<int:product_id>', methods=['GET'])
+def handle_get_product_price_by_id(product_id):
+    if request.method == 'GET':
+        return Product().get_product_price_by_id(product_id)
+    else:
+        return jsonify("Method Not Allowed"), 405
+
+
 # This route delete a product
 @app.route('/SurvivalApp/remove/product/<int:product_id>', methods=['DELETE'])
 def handle_delete_product(product_id):

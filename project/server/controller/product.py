@@ -16,6 +16,11 @@ class Product:
                   'product_description': product_description}
         return result
 
+    @staticmethod
+    def build_attr_dict_price(product_price):
+        result = {'product_price': product_price}
+        return result
+
     def add_new_product(self, json):
         product_name = json['product_name']
         product_price = json['product_price']
@@ -34,6 +39,12 @@ class Product:
         else:
             result = self.build_map_dict(part_tuple)
             return jsonify(result), 200
+
+    def get_product_price_by_id(self, product_id):
+        dao = ProductDAO()
+        product_price = dao.get_product_price_by_id(product_id)
+        result = self.build_attr_dict_price(product_price)
+        return jsonify(result)
 
     def get_product(self):
         dao = ProductDAO()

@@ -10,7 +10,7 @@ function navigationBar() {
               <li className="navButton">Home</li>
             </Link>
             
-            <Link className="navButton">
+            <Link to="/equipment" className="navButton">
               <li className="navButton">Equipment</li>
             </Link>
     

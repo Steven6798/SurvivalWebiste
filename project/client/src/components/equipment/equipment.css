@@ -1,0 +1,66 @@
+.EquipmentTitleDiv {
+  text-align: center;
+  background-image: url("../../images/EquipmentBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
+.EquipmentTitle {
+  padding-top: 80px;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.EquipmentTitleDescription {
+  padding-top: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffff;
+  font-family: Merriweather;
+  font-style: italic;
+  font-size: 36px;
+}
+
+.EquipmentProductDiv {
+  text-align: left;
+  padding-top: 1px;
+}
+
+.EquipmentProductDescription {
+  color: #000000;
+  font-family: Merriweather;
+  font-size: 28px;
+}
+
+div.ScenarioPadding {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 30px;
+}
+
+div.equipmentnoPadding {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+div.equipmentPaddingTop {
+    padding-top: 20px;
+}
+
+div.equipmentGridLines {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+div.picPadding {
+  padding-bottom: 150px;
+}
+
+.picDim {
+  width: 287px;
+  height: 200px;
+}

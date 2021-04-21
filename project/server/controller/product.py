@@ -1,5 +1,5 @@
 from flask import jsonify
-from model.product import ProductDAO
+from project.server.model.product import ProductDAO
 
 
 class Product:

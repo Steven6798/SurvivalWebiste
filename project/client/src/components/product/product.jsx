@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image'
 import SigSauer220R45LEGION from "../../images/Sig_Sauer_220R_45_LEGION.jpg"
 import SigSauerP365XROMEOZERO from "../../images/Sig_Sauer_P365X_ROMEOZERO.jpg"
 
-const API = 'http://127.0.0.1:5000/';
+const API = 'https://survivalwebsite.herokuapp.com/';
 const DEFAULT_QUERY = 'SurvivalApp/get/product';
 
 class Product extends React.Component {

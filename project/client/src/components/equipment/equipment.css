@@ -33,6 +33,8 @@
   color: #000000;
   font-family: Merriweather;
   font-size: 28px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 div.ScenarioPadding {
@@ -42,10 +44,8 @@ div.ScenarioPadding {
 }
 
 div.equipmentnoPadding {
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 div.equipmentPaddingTop {

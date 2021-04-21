@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./equipment.css";
 import NavBar from "../navigationBar/navigationBar";
 import Container from 'react-bootstrap/Container'
@@ -9,25 +9,27 @@ import SigSauer220R45LEGION from "../../images/Sig-Sauer-220R-45-LEGION.jpg"
 import SigSauerP365XROMEOZERO from "../../images/Sig-Sauer-P365X-ROMEOZERO.jpg"
 
 const API = 'http://127.0.0.1:5000/';
-const DEFAULT_QUERY = 'SurvivalApp/get/product/price/3';
+const DEFAULT_QUERY = 'SurvivalApp/get/product';
 
 class Equipment extends React.Component {
   constructor(props) {
     super(props);
  
     this.state = {
-      product_price: [],
+      result: []
     };
   }
 
   componentDidMount() {
     fetch(API + DEFAULT_QUERY)
       .then(response => response.json())
-      .then(data => this.setState({ product_price: data.product_price}));
+      .then(data => this.setState({result: data}));
   }
 
   render() {
-    const { product_price } = this.state;
+    const {result} = this.state;
+    const nameList = result.map(d => <h2 className="EquipmentProductDescription">{d.product_name}</h2>)
+    const priceList = result.map(d => <h2 className="EquipmentProductDescription">${d.product_price}</h2>)
     return (
       <React.Fragment>
         <div className="EquipmentTitleDiv">
@@ -55,33 +57,33 @@ class Equipment extends React.Component {
               <Col className="equipmentnoPadding">
                 <Row className="equipmentnoPadding equipmentGridLines">
                   <Col xs="3" className="equipmentnoPadding">
-                    <Image className="picDim d-block" src={SigSauerP365XROMEOZERO}/>
+                    <Image className="picDim d-block" src={SigSauer220R45LEGION}/>
                   </Col>
                   <Col className="equipmentnoPadding">
                     <Row className="equipmentnoPadding equipmentPaddingTop">
-                      <h2 className="EquipmentProductDescription">Sig Sauer P365X ROMEOZERO</h2>
+                      <h2 className="EquipmentProductDescription">{nameList[0]}</h2>
                     </Row>
                     <Row className="equipmentnoPadding">
                       <h2 className="EquipmentProductDescription">Stars</h2>
                     </Row>
                     <Row className="equipmentnoPadding">
-                      <h2 className="EquipmentProductDescription">${product_price}</h2>
+                      <h2 className="EquipmentProductDescription">{priceList[0]}</h2>
                     </Row>
                   </Col>
                 </Row>
                 <Row className="equipmentnoPadding equipmentGridLines">
                   <Col xs="3" className="equipmentnoPadding">
-                    <Image className="picDim d-block" src={SigSauer220R45LEGION}/>
+                    <Image className="picDim d-block" src={SigSauerP365XROMEOZERO}/>
                   </Col>
                   <Col className="equipmentnoPadding">
                     <Row className="equipmentnoPadding equipmentPaddingTop">
-                      <h2 className="EquipmentProductDescription">Sig Sauer P220R45 LEGION</h2>
+                      <h2 className="EquipmentProductDescription">{nameList[1]}</h2>
                     </Row>
                     <Row className="equipmentnoPadding">
                       <h2 className="EquipmentProductDescription">Stars</h2>
                     </Row>
                     <Row className="equipmentnoPadding">
-                      <h2 className="EquipmentProductDescription">$550.00</h2>
+                      <h2 className="EquipmentProductDescription">{priceList[1]}</h2>
                     </Row>
                   </Col>
                 </Row>

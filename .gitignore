@@ -2,3 +2,4 @@ project/client/node_modules/
 .idea
 .vscode
 project/server/config/
+**/__pycache__/

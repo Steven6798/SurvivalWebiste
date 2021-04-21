@@ -1,5 +1,3 @@
-project/client/node_modules/
-.idea
 .vscode
-project/server/config/
+config/
 **/__pycache__/

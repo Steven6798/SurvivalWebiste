@@ -10,8 +10,8 @@ function navigationBar() {
               <li className="navButton">Home</li>
             </Link>
             
-            <Link to="/equipment" className="navButton">
-              <li className="navButton">Equipment</li>
+            <Link to="/product" className="navButton">
+              <li className="navButton">Products</li>
             </Link>
     
             <Link to="/login" className="navButton">

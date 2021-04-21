@@ -1,15 +1,15 @@
 .TitleDiv {
   text-align: center;
-  background-image: url("../../images/TitleBackground.jpg");
+  background-image: url("../../images/home_bg_gray_climate.jpg");
   background-position: center;
   background-size: cover;
   min-height: 50vh;
+  color: #ffffff;
+  font-family: Merriweather;
 }
 
 .Title {
   padding-top: 80px;
-  color: #ffffff;
-  font-family: Merriweather;
   font-weight: bold;
   font-size: 64px;
 }
@@ -18,47 +18,44 @@
   padding-top: 30px;
   padding-left: 20%;
   padding-right: 20%;
-  color: #ffffff;
-  font-family: Merriweather;
   font-style: italic;
   font-size: 36px;
 }
 
 .ScenarioDiv {
   text-align: center;
-  background-image: url("../../images/ScenarioBackground.jpg");
+  background-image: url("../../images/home_bg_gray.jpg");
   background-position: center;
   background-size: cover;
   padding-top: 1px;
+  color: #ffffff;
+  font-family: Merriweather;
 }
 
 .ScenarioTitle {
   text-align: center;
-  color: #ffffff;
-  font-family: Merriweather;
   font-weight: bold;
   font-size: 48px;
 }
 
 .ScenarioDescription {
   padding-top: 20px;
-  color: #ffffff;
-  font-family: Merriweather;
   font-size: 36px;
 }
 
-div.ScenarioPadding {
+.ScenarioPadding {
   padding-right: 0px;
   padding-left: 0px;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
-div.noPadding {
-  padding-right: 0px;
-  padding-left: 0px;
+div.noPaddingMargin {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
-div.picPadding {
+.picPadding {
   padding-bottom: 150px;
 }
 

@@ -1,12 +1,14 @@
-from project.server.config.dbconfig import pg_config
+#from project.server.config.dbconfig import pg_config
+import os
 import psycopg2
 
 
 class ProductDAO:
     def __init__(self):
-        connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'], pg_config['user'],
-                                                                            pg_config['password'], pg_config['port'],
-                                                                            pg_config['host'])
+        #connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'], pg_config['user'],
+        #                                                                    pg_config['password'], pg_config['port'],
+        #                                                                    pg_config['host'])
+        connection_url = os.environ.get('DATABASE_URL')
         print("connection url:  ", connection_url)
         self.conn = psycopg2.connect(connection_url)
 

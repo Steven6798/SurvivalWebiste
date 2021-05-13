@@ -37,7 +37,7 @@ class ProductDAO:
 
     def get_product(self):
         cursor = self.conn.cursor()
-        query = "select * from product;"
+        query = "SELECT * FROM product ORDER BY product_name ASC;"
         cursor.execute(query)
         result = []
         for row in cursor:
